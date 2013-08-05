@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-        >
-    <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, SettingsActivity"
-            />
-</LinearLayout>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TableRow android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wakeup interval" />
+
+        <EditText android:id="@+id/wakeup_interval"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:inputType="number"
+                  />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="seconds" />
+    </TableRow>
+    <TableRow android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stay awake for" />
+
+        <EditText android:id="@+id/awake_for"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:inputType="number"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="seconds" />
+    </TableRow>
+
+    <TableRow android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp">
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start timers"
+                android:onClick="onStart"/>
+
+        <View android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1" />
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stop timers"
+                android:onClick="onStop" />
+    </TableRow>
+
+</TableLayout>
 
